@@ -1,0 +1,33 @@
+# --- Arduino / ESP32 build artifacts ---
+build/
+*.bin
+*.elf
+*.map
+*.hex
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# --- Arduino IDE ---
+*.ino.cpp
+
+# --- Node-RED ---
+node-red/node_modules/
+node-red/.node-red/
+node-red/flows_cred.json
+node_modules/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log
+
+# --- Environment / secrets ---
+.env
+secrets.h

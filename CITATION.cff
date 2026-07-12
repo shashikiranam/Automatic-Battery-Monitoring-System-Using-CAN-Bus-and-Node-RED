@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Automatic Battery Monitoring System using CAN Bus and Node-RED"
+type: software
+version: 1.0.0
+date-released: 2026-07-11
+license: MIT
+repository-code: "https://github.com/your-org/Automatic-Battery-Monitoring-System-Using-CAN-Bus-and-Node-RED"
+keywords:
+  - embedded-systems
+  - esp32
+  - can-bus
+  - battery-monitoring
+  - node-red
+  - iot
+  - mcp2515
+abstract: >
+  A real-time battery monitoring system built on the ESP32 microcontroller
+  that measures voltage, current, temperature, and weight, evaluates
+  battery health status, transmits telemetry over a CAN bus at 500 kbps,
+  and visualizes it through a Node-RED dashboard.
+authors:
+  - name: "Automatic Battery Monitoring System Contributors"
