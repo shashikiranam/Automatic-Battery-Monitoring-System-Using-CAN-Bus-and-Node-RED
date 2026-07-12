@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="480" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">System Architecture — Automatic Battery Monitoring System</text>
+
+  <!-- Sensor boxes -->
+  <g fill="#eef4fb" stroke="#2b6cb0" stroke-width="1.5">
+    <rect x="30" y="90" width="150" height="55" rx="6"/>
+    <rect x="30" y="160" width="150" height="55" rx="6"/>
+    <rect x="30" y="230" width="150" height="55" rx="6"/>
+    <rect x="30" y="300" width="150" height="55" rx="6"/>
+  </g>
+  <g font-size="13" fill="#1a1a1a" text-anchor="middle">
+    <text x="105" y="113">INA219</text>
+    <text x="105" y="130">Voltage / Current (I2C)</text>
+    <text x="105" y="183">DS18B20</text>
+    <text x="105" y="200">Temperature (1-Wire)</text>
+    <text x="105" y="253">HX711 + Load Cell</text>
+    <text x="105" y="270">Weight (Digital)</text>
+    <text x="105" y="323">Status LED</text>
+    <text x="105" y="340">Heartbeat (GPIO)</text>
+  </g>
+
+  <!-- ESP32 box -->
+  <rect x="270" y="150" width="180" height="150" rx="8" fill="#fef6e0" stroke="#b7791f" stroke-width="2"/>
+  <text x="360" y="185" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">ESP32</text>
+  <text x="360" y="205" text-anchor="middle" font-size="13" fill="#1a1a1a">DevKit V1</text>
+  <text x="360" y="230" text-anchor="middle" font-size="11" fill="#4a4a4a">Sensor sampling</text>
+  <text x="360" y="248" text-anchor="middle" font-size="11" fill="#4a4a4a">Filtering + status logic</text>
+  <text x="360" y="266" text-anchor="middle" font-size="11" fill="#4a4a4a">CAN frame packing</text>
+  <text x="360" y="284" text-anchor="middle" font-size="11" fill="#4a4a4a">100ms scheduler</text>
+
+  <!-- MCP2515 box -->
+  <rect x="530" y="170" width="150" height="110" rx="8" fill="#eefaf0" stroke="#2f855a" stroke-width="2"/>
+  <text x="605" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">MCP2515</text>
+  <text x="605" y="220" text-anchor="middle" font-size="12" fill="#1a1a1a">CAN Controller</text>
+  <text x="605" y="240" text-anchor="middle" font-size="11" fill="#4a4a4a">SPI @ 8MHz xtal</text>
+  <text x="605" y="258" text-anchor="middle" font-size="11" fill="#4a4a4a">500 kbps CAN</text>
+
+  <!-- CAN Bus -->
+  <rect x="720" y="205" width="120" height="40" rx="6" fill="#fbeaea" stroke="#c53030" stroke-width="1.5"/>
+  <text x="780" y="230" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">CAN Bus</text>
+
+  <!-- USB-CAN adapter -->
+  <rect x="720" y="270" width="120" height="45" rx="6" fill="#f4f0fb" stroke="#6b46c1" stroke-width="1.5"/>
+  <text x="780" y="290" text-anchor="middle" font-size="11" fill="#1a1a1a">USB-CAN</text>
+  <text x="780" y="305" text-anchor="middle" font-size="11" fill="#1a1a1a">Adapter</text>
+
+  <!-- Node-RED -->
+  <rect x="870" y="150" width="105" height="150" rx="8" fill="#e6f4fb" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="922" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">Node-RED</text>
+  <text x="922" y="205" text-anchor="middle" font-size="10" fill="#4a4a4a">CAN decode</text>
+  <text x="922" y="222" text-anchor="middle" font-size="10" fill="#4a4a4a">Gauges</text>
+  <text x="922" y="239" text-anchor="middle" font-size="10" fill="#4a4a4a">Charts</text>
+  <text x="922" y="256" text-anchor="middle" font-size="10" fill="#4a4a4a">Alerts</text>
+
+  <!-- Arrows -->
+  <g stroke="#333333" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <line x1="180" y1="117" x2="270" y2="200"/>
+    <line x1="180" y1="187" x2="270" y2="215"/>
+    <line x1="180" y1="257" x2="270" y2="240"/>
+    <line x1="180" y1="327" x2="270" y2="260"/>
+    <line x1="450" y1="225" x2="530" y2="225"/>
+    <line x1="680" y1="215" x2="720" y2="220"/>
+    <line x1="780" y1="245" x2="780" y2="270"/>
+    <line x1="840" y1="292" x2="870" y2="230"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <!-- UART debug -->
+  <rect x="270" y="340" width="180" height="45" rx="6" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
+  <text x="360" y="367" text-anchor="middle" font-size="12" fill="#1a1a1a">UART Debug Console (115200)</text>
+  <line x1="360" y1="300" x2="360" y2="340" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="500" y="450" text-anchor="middle" font-size="11" fill="#6a6a6a">Concept architecture diagram — not a photograph or live system capture.</text>
+</svg>

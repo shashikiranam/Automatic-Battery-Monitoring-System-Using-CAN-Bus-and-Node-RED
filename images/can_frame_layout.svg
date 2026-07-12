@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="460" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">CAN Frame Byte Layout Reference</text>
+
+  <!-- Column headers -->
+  <g font-size="11" fill="#4a4a4a" text-anchor="middle">
+    <text x="220" y="66">Byte 0</text>
+    <text x="290" y="66">Byte 1</text>
+    <text x="360" y="66">Byte 2</text>
+    <text x="430" y="66">Byte 3</text>
+    <text x="500" y="66">Byte 4</text>
+    <text x="570" y="66">Byte 5</text>
+    <text x="640" y="66">Byte 6</text>
+    <text x="710" y="66">Byte 7</text>
+  </g>
+
+  <!-- Rows: id label + 8 byte cells -->
+  <!-- helper: cells at x=185+70*i width=65 height=34 -->
+
+  <!-- 0x100 Voltage -->
+  <text x="100" y="94" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x100 Voltage</text>
+  <g stroke="#2b6cb0" stroke-width="1" fill="#eef4fb">
+    <rect x="185" y="76" width="65" height="30"/><rect x="255" y="76" width="65" height="30"/>
+    <rect x="325" y="76" width="65" height="30" fill="#f5f5f5"/><rect x="395" y="76" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="465" y="76" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="76" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="76" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="76" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="96" text-anchor="middle" font-size="10">V_MSB</text>
+  <text x="287" y="96" text-anchor="middle" font-size="10">V_LSB</text>
+
+  <!-- 0x101 Current -->
+  <text x="100" y="140" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x101 Current</text>
+  <g stroke="#dd6b20" stroke-width="1" fill="#fdf1e6">
+    <rect x="185" y="122" width="65" height="30"/><rect x="255" y="122" width="65" height="30"/>
+    <rect x="325" y="122" width="65" height="30" fill="#f5f5f5"/><rect x="395" y="122" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="465" y="122" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="122" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="122" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="122" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="142" text-anchor="middle" font-size="10">I_MSB</text>
+  <text x="287" y="142" text-anchor="middle" font-size="10">I_LSB</text>
+
+  <!-- 0x102 Temperature -->
+  <text x="100" y="186" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x102 Temperature</text>
+  <g stroke="#c53030" stroke-width="1" fill="#fbeaea">
+    <rect x="185" y="168" width="65" height="30"/><rect x="255" y="168" width="65" height="30"/>
+    <rect x="325" y="168" width="65" height="30" fill="#f5f5f5"/><rect x="395" y="168" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="465" y="168" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="168" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="168" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="168" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="188" text-anchor="middle" font-size="10">T_MSB</text>
+  <text x="287" y="188" text-anchor="middle" font-size="10">T_LSB</text>
+
+  <!-- 0x103 Weight -->
+  <text x="100" y="232" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x103 Weight</text>
+  <g stroke="#2f855a" stroke-width="1" fill="#eefaf0">
+    <rect x="185" y="214" width="65" height="30"/><rect x="255" y="214" width="65" height="30"/>
+    <rect x="325" y="214" width="65" height="30" fill="#f5f5f5"/><rect x="395" y="214" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="465" y="214" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="214" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="214" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="214" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="234" text-anchor="middle" font-size="10">W_MSB</text>
+  <text x="287" y="234" text-anchor="middle" font-size="10">W_LSB</text>
+
+  <!-- 0x104 Power -->
+  <text x="100" y="278" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x104 Power</text>
+  <g stroke="#6b46c1" stroke-width="1" fill="#f4f0fb">
+    <rect x="185" y="260" width="65" height="30"/><rect x="255" y="260" width="65" height="30"/>
+    <rect x="325" y="260" width="65" height="30" fill="#f5f5f5"/><rect x="395" y="260" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="465" y="260" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="260" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="260" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="260" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="280" text-anchor="middle" font-size="10">P_MSB</text>
+  <text x="287" y="280" text-anchor="middle" font-size="10">P_LSB</text>
+
+  <!-- 0x105 System Status -->
+  <text x="100" y="324" font-size="12" font-weight="bold" fill="#1a1a1a" text-anchor="end">0x105 SysStatus</text>
+  <g stroke="#4a5568" stroke-width="1" fill="#edf2f7">
+    <rect x="185" y="306" width="65" height="30"/><rect x="255" y="306" width="65" height="30"/>
+    <rect x="325" y="306" width="65" height="30"/><rect x="395" y="306" width="65" height="30"/>
+    <rect x="465" y="306" width="65" height="30" fill="#f5f5f5"/><rect x="535" y="306" width="65" height="30" fill="#f5f5f5"/>
+    <rect x="605" y="306" width="65" height="30" fill="#f5f5f5"/><rect x="675" y="306" width="65" height="30" fill="#f5f5f5"/>
+  </g>
+  <text x="217" y="326" text-anchor="middle" font-size="9">Status</text>
+  <text x="287" y="326" text-anchor="middle" font-size="9">CAN Err</text>
+  <text x="357" y="326" text-anchor="middle" font-size="9">SensorOK</text>
+  <text x="427" y="326" text-anchor="middle" font-size="9">Alerts</text>
+
+  <text x="500" y="380" text-anchor="middle" font-size="12" fill="#1a1a1a">Shaded gray cells = reserved (always 0x00). Colored cells = active data bytes.</text>
+  <text x="500" y="400" text-anchor="middle" font-size="11" fill="#4a4a4a">Scale factors: Voltage/Current/Temperature/Power = x100, Weight = x1000. See CAN_FRAME_DOCUMENTATION.md</text>
+  <text x="500" y="430" text-anchor="middle" font-size="11" fill="#6a6a6a">Concept reference diagram — not a captured bus trace or oscilloscope image.</text>
+</svg>
